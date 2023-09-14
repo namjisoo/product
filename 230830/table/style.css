@@ -1,0 +1,60 @@
+table{
+    border: 1px solid #222;
+    border-collapse: collapse;
+}
+
+table th{
+    border-bottom: 1px solid #222;
+}
+
+table td{
+    border-bottom: 1px solid #222;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: gray;
+}
+
+table th,
+table td{
+    border-right: 1px solid #222;
+    /* padding:10px 20px; 상하 좌우 */
+    /* padding:10px 20px 30px; 상 좌우 하 */
+    /* 상, 우, 하, 좌 */
+    /* padding:10px 20px 30px 40px; */
+    padding:10px;
+}
+
+/* -------------------------------------------
+table td{
+    border-top: 2px double #222;
+}
+
+table td:first-child,
+table th:first-child{
+    border-right: 1px solid #222;
+}
+
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:5px;
+    padding-left:5px;
+
+
+table td:last-child,
+table th:last-child{
+    border-left: 1px solid #222;
+}
+
+수평정렬- left, right, center
+수직정렬- top, bottom, middle
+--------------------------------------------- */
+
+table td:last-child{
+    text-align: right;
+    vertical-align: top;
+}
+
+table th{
+    text-align: left;
+}

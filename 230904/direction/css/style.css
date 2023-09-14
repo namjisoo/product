@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    background-color: #f0c2c2d5;
+    height: 100vh;
+    /* align-items: flex-start; */
+    /* flex-direction: row-reverse; 는 주축의 진행방향을 역순으로 변경 */
+    /* flex 주축의 방향의 기본값은 row */
+    flex-direction: column-reverse;
+    /* column은 주축의 진행방향을 교차축 방향으로 바꾼다. 가로로 진행하던 걸, 세로로 진행한다. */
+    align-items: center;
+}
+
+.box{
+    flex-grow: 1;
+    flex-basis: calc(100%/3);
+    background-color: aqua;
+}
+
+.box:nth-child(2){
+    flex-grow: 2;
+    background-color: #23bad4;
+}
+
+.box:nth-child(3){
+    background-color: rgb(115, 58, 223);
+}
+
+.box:nth-child(4){
+    background-color: rgb(138, 177, 48);
+}
+
+.box:nth-child(5){
+    background-color: rgb(194, 108, 28);
+}
+
+.box:nth-child(6){
+    background-color: #c24999;
+}

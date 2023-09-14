@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    /* border: 3px solid transparent; */
+}   
+
+img:hover{
+    transform: rotate(20deg);
+    /* border: 3px solid pink; */
+    box-shadow: 0 0 0 3px pink, 0 0 0 5px red;
+ } 
+
+.container{
+    display: flex;
+    width: 1140px;
+    max-width: 100%; 
+    height: 400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card:nth-child(even){
+    align-self: flex-end;
+}
+
+.card:nth-child(even):hover{
+    align-self: flex-start;
+}
+
+figure{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background-color: red;
+    padding: 13px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    font-size: 14px;
+}

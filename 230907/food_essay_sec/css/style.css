@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    /* 아래 두속성은 이미지를 중앙, 맞추기 위함이다 */
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    display: flex;
+    background-color: hsl(324, 33%, 94%);
+    height: 50vh;
+    justify-content: center;
+
+}
+
+.inner{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+.gallery{
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery-item{
+    flex-basis: calc(100%/3);
+}
+
+.gallery-image{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.gallery-image:hover span{
+    /* display: block; */
+    /* opacity: 1; */
+    transform: translateY(0);
+}
+
+.btn{
+    text-decoration: none;
+    color: red;
+    border: 2px solid red;
+    padding: 10px 0;
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+span{
+    position: absolute;
+    background-color: hsla(340, 57%, 64%, 0.8);
+    width: 100%;
+    padding: 0.5rem;
+    bottom: 0;
+    left: 0;
+    color: white;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    /* opacity: 투명도 0~1로 제어가능
+    visivblity: 가시성 유무를 표현한다. visible, hidden  */
+    /* display: none; */
+    transition: all 0.5s ease;
+    transform: translateY(100%);
+}

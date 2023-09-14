@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    max-width: 800px;   
+    background-color: hsl(342, 46%, 80%);
+    /* align-items: flex-end; */
+}
+
+.flex div{
+    flex-grow: 1;
+}
+
+.stretch{
+    align-self: stretch;
+    background-color:hsl(342, 46%, 70%) ;
+}
+
+.start{
+    align-self: flex-start;
+    background-color: hsl(342, 46%, 60%);
+}
+
+.center{
+    align-self: center;
+    background-color: hsl(342, 46%, 50%);
+}
+
+.end{
+    align-self: flex-end;
+    background-color: hsl(342, 46%, 40%);
+}

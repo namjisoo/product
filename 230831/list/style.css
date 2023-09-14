@@ -1,0 +1,9 @@
+.container{
+    border: 1px solid black;
+    padding: 15px 30px;
+}
+
+h1,h2{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}

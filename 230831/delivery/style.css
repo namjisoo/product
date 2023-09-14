@@ -1,0 +1,38 @@
+table{
+
+    border-collapse: collapse;
+}
+
+table tr{
+    border-bottom: 1px solid black;
+}
+
+table td{
+    padding: 7px; 
+}
+
+table tr:nth-child(even){
+    background-color: aliceblue;
+}
+
+table td:first-child{
+    text-align: center;
+    font-weight: 700;
+    border-right: 3px double black;
+}
+
+.container{
+    border: 3px solid black;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.corner{    
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden
+}
+
+table tr:last-child{
+    border-bottom: 0;
+}

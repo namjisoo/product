@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: hsl(240, 50%, 50%);
+}
+
+#static{
+    background-color:hsl(240, 50%, 60%);
+    position: static;
+    top: 100px;
+    left: 100px;
+    /* static은 탑, 렢에 값을 줘도 안 움직임 */
+}
+
+#relative{
+    background-color:hsl(240, 50%, 70%);
+    position: relative;
+    top: 100px;
+    left: 100px;
+    /* 현재 위치를 기준으로 움직임 */
+}
+
+#absolute{
+    background-color:hsl(240, 50%, 80%);
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+/* absolute는 부모(relative)를 기준으로 좌표가 생임 */
+
+#fixed{
+    background-color:hsl(240, 50%, 90%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+/* 부모가 누구든 상관 안 하고 브라우저를 기준으로 고집함 */

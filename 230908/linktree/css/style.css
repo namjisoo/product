@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;1,100&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;1,100&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@500;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.inner{
+    background-image: url('https://images.pexels.com/photos/2591408/pexels-photo-2591408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    display: flex;
+    width: 390px;
+    height: 690px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.image{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    margin-bottom: 10px;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: yellowgreen;
+    border: 2px solid yellowgreen;
+    padding: 10px 80px;
+    margin: 10px;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Libre Baskerville', serif;
+    backdrop-filter: blur(10px);
+}
+
+a:hover{
+    background-color: yellowgreen;
+    color: white;
+}
+
+h3, p{
+    color: yellowgreen;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 10px;
+}
+
+p, .icon{
+    margin-bottom: 30px;
+}
+
+.ic{
+    color: yellowgreen;
+    font-size: 20px;
+    padding: 5px;
+}
+

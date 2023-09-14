@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html,body{
+    font-family: 'BookkMyungjo-Bd';
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body{
+    background-color: hsl(0, 0%, 90%);
+}
+
+.card{
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem auto 0;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* 축의 방향을 y축으로 정렬 */
+    align-items: center;
+    gap: 0.25rem; 
+    /* box-shadow: x y blur spread color; */
+    box-shadow: -10px 10px 3px rgba(0, 0, 0, 0.2);
+    /* rgba = red, green, blue, alpha( 투명도) */
+    transition: all 0.5s ease;
+    transform: translateY(0)
+}
+
+.card:hover{
+    transform: translateY(-10%)
+}
+
+.avatar{
+    width: 128px;
+    height: 128px;
+    border: 3px solid #ac4cd8;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card h2{
+    font-size: 20px;
+}
+
+.card p{
+    font-size: 18px;
+}
+
+.card .button{
+    border: 1px solid hsl(207, 50%, 66%);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    /* 인라인과 블록의 성격을 모두 갖고있는 것 */
+    transition: all 0.3s ease;
+}
+
+
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+.button:hover .icon{
+    color: white;
+}
+
+
+.icon{
+    font-size: 15px;
+    color: pink;
+}
+

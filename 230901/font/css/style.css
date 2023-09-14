@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;800&display=swap');
+@font-face {
+    font-family: 'Hangeuljaemin4-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Hangeuljaemin4-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ansungtangmyun-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/Ansungtangmyun-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.title{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    /* text-decoration: line-through; */
+    letter-spacing: -0.5px;
+    /* 자간 */
+    line-height: 1.5;
+    /* 행간 */
+    white-space: nowrap;
+}
+
+.jaemin{
+    font-family: 'Hangeuljaemin4-Regular';
+}
+
+.ramen{
+    font-family: 'Ansungtangmyun-Bold';
+}

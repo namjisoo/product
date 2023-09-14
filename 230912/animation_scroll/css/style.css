@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    object-fit: cover;
+}
+
+.container{
+    background-image: url('https://images.pexels.com/photos/886051/pexels-photo-886051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* border: 1px solid black; */
+    background-position: center;
+    /* background-size: 100%; */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(56, 39, 1, 0.5));
+}
+
+.content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 200px;
+    z-index: 10;
+}
+
+.button{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 30vh;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.btn{
+    width: 25px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.circle{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    animation: morph 1s infinite alternate cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes morph{
+    0%{
+        transform: translateY(0);
+        /* top:5px; */
+    }
+
+    100%{
+        transform: translateY(400%);
+        /* top: 40px; */
+    }
+}

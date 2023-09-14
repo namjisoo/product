@@ -1,0 +1,46 @@
+#header{
+    font-size: 16px;
+}
+
+#header h2{
+    font-size: 0.75rem; 
+}
+
+.list{
+    font-size: 60px;
+
+}
+
+.list li{
+    font-size: 0.8rem;
+}
+
+.btn{
+    /* width: 50px;
+    height: 40px; */
+    padding: 0.5rem 1rem;
+    background-color: aquamarine;
+    border: 0.2rem solid seagreen;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none; 
+    /* a 태그의 밑줄을 없애는 것 */
+    color: black;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* 1s = 1000ms */
+}
+
+.btn-primary{
+    background-color: yellowgreen;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #41a0d8;
+}
+
+.btn:active{
+    background-color: #f0bb49;
+}

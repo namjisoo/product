@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    background-color: hsl(160, 77%, 94%);
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    /* 양쪽으로 균등하게 여백을 만들어 중앙으로 정렬 */
+    margin: 0 auto;
+    /*  중앙정렬 축약형 */
+    justify-content: center;
+    /* 자식요소들을 균등하게 배치할 때 자주 쓰이는 속성 */
+    /* flex-direction: row-reverse; 순서 역순 */
+    align-items: center;
+}
+
+
+.flex div{
+    flex-basis: calc(100% / 5);
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    background-color: hsl(81, 79%, 54%);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    /* align-content는 여러줄일 때만 작동. '전체y축정렬' */
+}
+
+.container div{
+    flex-basis: calc(100% / 5);
+}
+
+.container > div:nth-child(1),
+.flex div:nth-child(1){
+    flex-basis: 40%;
+    background-color: hsl(160, 77%, 84%);
+}
+
+.container div:nth-child(2),
+.flex div:nth-child(2){
+    background-color: hsl(160, 77%, 74%);
+
+}
+
+.container div:nth-child(3),
+.flex div:nth-child(3){
+    background-color: hsl(160, 77%, 64%);
+
+}
+
+.container div:nth-child(4),
+.flex div:nth-child(4){
+    background-color: hsl(160, 77%, 54%);
+    color: white;
+}
+
+.container div:nth-child(5),
+.flex div:nth-child(5){
+    background-color: hsl(160, 77%, 44%);
+    color: white;
+}
+
+.container div:nth-child(6),
+.flex div:nth-child(6){
+    background-color: hsl(160, 77%, 34%);
+    color: white;
+}
+
+.container div:nth-child(7),
+.flex div:nth-child(7){
+    flex-basis: 60%;
+    background-color: hsl(160, 77%, 24%);
+    color: white;
+}
+
+.container div:nth-child(8),
+.flex div:nth-child(8){
+    background-color: hsl(160, 77%, 14%);
+    color: white;
+}
+
+.container div:nth-child(9),
+.flex div:nth-child(9){
+    background-color: hsl(160, 77%, 4%);
+    color: white;
+}    
