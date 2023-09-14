@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    /* border: 1px solid yellowgreen; */
+    box-shadow: 0 0 0 1px yellowgreen;
+    position: relative;
+}
+
+.input-wrapper input{
+    padding: 1rem;
+    border: 0;
+}
+
+.input-wrapper label{
+    position: absolute;
+    top: -16px;
+    left: 9px;
+    background-color: white;
+    padding: 5px 8px;
+}
+
+.input-wrapper input:focus{
+    outline: none;
+    /* border: 3px solid yellowgreen; */
+    box-shadow: 0 0 0 3px yellowgreen;
+}
+
+button[type="submit"]{
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: yellowgreen;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"]:active{
+    background-color: black;
+}
+
