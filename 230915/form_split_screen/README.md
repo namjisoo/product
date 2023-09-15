@@ -4,7 +4,7 @@
 md파일이란 **markdown** 문서를 이야기한다.
 
 ---
-![벚꽃](https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+![강아지](https://images.pexels.com/photos/14309988/pexels-photo-14309988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 - 리스트는 이렇게 작성합니다
 - 두번째 리스트
