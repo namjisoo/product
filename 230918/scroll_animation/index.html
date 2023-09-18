@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <figure>
+            <img src="image/pexels-photo-12010319.jpg" alt="">
+        </figure>
+        <div class="content">
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor error voluptates quam rerum
+                distinctio magni optio. Qui, nobis ipsa! Voluptas repellat quam nesciunt repellendus cumque, ipsum
+                inventore atque facere!</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- data-aos-anchor-placement는 top-bottom일 경우, 자기 자신의 top 부분이, 화면의 bottom에 걸렸을 때 실행된다는 의미 -->
+        <figure data-aos="fade-left">
+            <img src="image/pexels-photo-18365722.jpg" alt="">
+        </figure>
+        <div class="content">
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor error voluptates quam rerum
+                distinctio magni optio. Qui, nobis ipsa! Voluptas repellat quam nesciunt repellendus cumque, ipsum
+                inventore atque facere!</p>
+        </div>
+    </div>
+    <div class="container">
+        <figure  data-aos="fade-right">
+            <img src="image/pexels-photo-17869843.jpg" alt="">
+        </figure>
+        <div class="content">
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor error voluptates quam rerum
+                distinctio magni optio. Qui, nobis ipsa! Voluptas repellat quam nesciunt repellendus cumque, ipsum
+                inventore atque facere!</p>
+        </div>
+    </div>
+    <div class="container">
+        <figure data-aos="fade-left">
+            <img src="image/pexels-photo-18242145.jpg" alt="">
+        </figure>
+        <div class="content">
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor error voluptates quam rerum
+                distinctio magni optio. Qui, nobis ipsa! Voluptas repellat quam nesciunt repellendus cumque, ipsum
+                inventore atque facere!</p>
+        </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS 초기화 -->
+    <script>
+        AOS.init(
+            {
+                duration: 600,
+                delay: 300,
+            }
+        );
+    </script>
+</body>
+
+</html>
