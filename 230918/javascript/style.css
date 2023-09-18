@@ -1,0 +1,16 @@
+#title{
+    color: blue;
+}
+
+#bar{
+    background-color: aliceblue;
+    height: 50px;
+    width: 100%;
+}
+
+#graph{
+    background-color: green;
+    width: 50%;
+    height: 100%;
+}
+
