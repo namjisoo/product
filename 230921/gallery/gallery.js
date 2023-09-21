@@ -26,6 +26,12 @@ for(let i = 0; i< buttons.length; i++){
         console.log(data[i].url)
         image.src = data[i].url
         title.textContent = data[i].title
+
+        for(let i = 0; i < buttons.length; i++){
+            buttons[i].classList.remove('check')
+        }
+        
+        buttons[i].classList.add('check')
     })
 }
 
