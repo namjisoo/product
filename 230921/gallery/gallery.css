@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+#list{
+    padding: 1rem;
+    list-style: none;
+}
+
+#list li{
+    color: white;
+    background-color: hsl(356, 87%, 85%);
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
