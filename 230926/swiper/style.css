@@ -1,0 +1,31 @@
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+  
+  .swiper-slide{
+    user-select: none;
+  }
+
+  .swiper-slide.first{
+    background-image: url('https://images.pexels.com/photos/16278274/pexels-photo-16278274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-size: cover;
+  }
+  .swiper-slide.second{
+    background-color: yellowgreen;
+  }
+  .swiper-slide.third{
+    background-color: pink;
+  }
+
+  .swiper-pagination-bullet{
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: black;
+    width: 20px;
+    border-radius: 5px;
+  }
