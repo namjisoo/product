@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let num = 1;
+    num++; // num = num + 1
+    console.log(num);
+    num--;
+    console.log(num);
+
+    let x = 3;
+    let y = x++;
+    // ++x + y++;
+    console.log(x, y);
+
+    let w = 10;
+    let z = w-- + 5 + --w + --w;
+    console.log(w, z);
+
+    let k = 5;
+    let l = k++ - 3 + ++k;
+    k++;
+    console.log(k, l);
+
+    // ++k ==> k += 1;
+  </script>
+</html>

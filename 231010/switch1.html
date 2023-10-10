@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var grade = prompt("성적을 입력하시오:", "0~100사이의 숫자로");
+      switch (grade) {
+        case "90, 100": // ==> if(grade == "A")
+          document.write("A");
+          break;
+        case "B":
+          document.write("B");
+          break;
+        case "C":
+          document.write("C");
+          break;
+        case "D":
+          document.write("D");
+          break;
+        case "F":
+          document.write("F");
+          break;
+        default:
+          document.write("알 수 없는 학점입니다");
+      }
+    </script>
+  </body>
+</html>
