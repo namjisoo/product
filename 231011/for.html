@@ -13,10 +13,17 @@
     }
 
     // 1 ~ 5 까지의 합을 구하세요. (반복문 사용하여)
+    // 각각의 i 값의 합을 1부터 5까지 문자열로 표현
     let sum = 0;
+    let str = "";
     for (let i = 1; i < 6; i++) {
       sum = sum + i;
-      document.write(i + "=" + sum + "<br/>");
+      if (i == 1) {
+        str += i;
+      } else {
+        str += "+" + i;
+      }
+      document.write(str + " = " + sum + "<br/>");
     }
   </script>
 </html>
