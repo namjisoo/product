@@ -83,7 +83,7 @@
     }
     document.write("<hr/>");
 
-    // 트리모양
+    // 트리
     for (i = 0; i < 5; i++) {
       for (j = 4; j > i; j--) {
         document.write("&nbsp");
@@ -94,5 +94,47 @@
       document.write("<br/>");
     }
     document.write("<hr/>");
+
+    // 거꾸로 트리
+    for (i = 0; i < 5; i++) {
+      for (j = 0; j < i; j++) {
+        document.write("&nbsp");
+      }
+      for (k = 9; k > i * 2; k--) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+    document.write("<hr/>");
+
+    //마름모
+    for (i = 0; i < 5; i++) {
+      for (j = 4; j > i; j--) {
+        document.write("&nbsp");
+      }
+      for (k = 0; k <= i * 2; k++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+    for (i = 0; i < 5; i++) {
+      for (j = 0; j <= i; j++) {
+        document.write("&nbsp");
+      }
+      for (k = 7; k > i * 2; k--) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+    document.write("<hr/>");
+
+    //마름모 reapeat 함수 이용
+    //문자열.repeat(반복횟수);
+    for (let i = 1; i <= 5; i++) {
+      document.write("&nbsp;".repeat(5 - i) + "*".repeat(2 * i - 1) + "<br/>");
+    }
+    for (let j = 4; j >= 1; j--) {
+      document.write("&nbsp;".repeat(5 - j) + "*".repeat(2 * j - 1) + "<br/>");
+    }
   </script>
 </html>
