@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* #box1 {
+  width: 200px;
+  height: 100px;
+  background-color: cadetblue;
+  color: white; */
+/* 글자색 아니고 기본색 설정 */
+/* font-weight: bold;
+  text-align: center;
+  padding-top: 35px;
+} */
+
+#box1 {
+  width: 200px;
+  height: 100px;
+  background-color: cadetblue;
+  color: white;
+  position: relative;
+}
+
+#inner_box {
+  display: inline;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
