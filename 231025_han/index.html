@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="jisoo nam" />
+    <meta name="keywords" content="팝업, 모달, 모달창, 레이어팝업" />
+    <meta
+      name="description"
+      content="HTML, CSS를 이용해 기존의 내용은 그대로 유지하면서 새로운 내용을 환기하여 보여주는 modal window를 제작할 수 있다"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>애국가</h1>
+    <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+    <h1>한글</h1>
+    <p>가나다라마바사아자차카타파하</p>
+
+    <button id="modal_open" type="button">모달 열기</button>
+
+    <div id="modal_back">
+      <div id="modal_win">
+        <div id="modal_header">
+          <h4>modal_window</h4>
+          <button id="modal_close" type="button">&times;</button>
+          <!-- button은 기본적으로 submit 타입이라 꼭 타입을 설정해 두어야 한다. -->
+        </div>
+        <div id="modal_body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, animi
+          ea tempora voluptate magnam voluptates, consequatur similique
+          eligendi, debitis aspernatur excepturi praesentium hic perspiciatis
+          nam error quidem odit enim saepe?
+        </div>
+      </div>
+    </div>
+    <script>
+      // #modal_open이 눌리면 이런일이벌어질것이다.
+      // #bodal_back의 스타일 중 display의 값을 'block'으로 변경한다.
+      // (숨겨졌던 #modal_back이 보여진다.)
+      document.getElementById("modal_open").onclick = function () {};
+
+      // #modal_close가 눌리면 이런일이벌어질것이다.
+      // #modal_back의 스타일 중 display의 값을 'none'으로 변경한다.
+      // (보여졌던 #modal_back이 숨겨진다.)
+    </script>
+  </body>
+</html>
