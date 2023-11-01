@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <figure class="off">
+        <img id="img" src="image/power.png" alt="" class="off" />
+      </figure>
+    </div>
+  </body>
+  <script>
+    const img = document.getElementById("img");
+    const figure = document.querySelector("figure");
+
+    img.addEventListener("click", () => {
+      //   const currentClass = img.classList[0];
+      //   if (currentClass == "off") {
+      //     img.classList.remove("off");
+      //     img.classList.add("on");
+      //     figure.classList.remove("off");
+      //     figure.classList.add("on");
+      //   } else {
+      //     img.classList.remove("on");
+      //     img.classList.add("off");
+      //     figure.classList.remove("on");
+      //     figure.classList.add("off");
+      //   }
+      img.classList.toggle("on");
+      figure.classList.toggle("on");
+    });
+  </script>
+</html>

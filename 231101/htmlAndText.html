@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../resources/jquery.js"></script>
+  <body>
+    <p>1<span>홍길동</span></p>
+    <p>2<span>개나리</span></p>
+    <p>3<span>진달래</span></p>
+  </body>
+  <script>
+    // $("p").on("click", function () {
+    //   //   console.log($(this).html());
+    //   console.log($(this).text());
+    // });
+
+    const pTags = $("p");
+    console.log(pTags.length);
+    pTags.each((index, item) => {
+      //   console.log($(item).html());
+      console.log(item.innerHTML);
+    });
+
+    // jquery each 함수
+    $.each(pTags, function (index, item) {
+      //
+    });
+
+    $(slector).each(function (index, item) {
+      //
+    });
+  </script>
+</html>

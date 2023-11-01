@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="구글창 열기" onclick="openPopup()" />
+  </body>
+  <script>
+    function openPopup() {
+      // scrollbars=no, resizable=no 는 IE에서만 적용 가능
+      const child = open(
+        "http://www.google.co.kr",
+        "_blank",
+        "width=1000,height=1000"
+      );
+      console.log(child);
+      child.close();
+    }
+  </script>
+</html>

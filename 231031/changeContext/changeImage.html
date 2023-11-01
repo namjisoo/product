@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="images/img1.jpg" alt="" id="image" width="300" height="300" />
+    <script>
+      function changeImage() {
+        document.getElementById("image").src = "images/img2.webp";
+      }
+    </script>
+    <input type="button" onclick="changeImage()" value="눌러보세요" />
+  </body>
+</html>
