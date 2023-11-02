@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <body>
+    <button>이미지 추가</button>
+  </body>
+  <script>
+    $("button").on("click", function () {
+      const imgArr = ["img1.jpg"];
+      const randNum = parseInt(Math.random() * 5);
+      const img = $(
+        '<img src="../resources/images/${imgArr[randNum]}" width="200px" height="200px" style="border: 1px solid red;">'
+      );
+      img.appendTo("body");
+    });
+  </script>
+</html>

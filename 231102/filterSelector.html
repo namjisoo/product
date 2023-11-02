@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../resources/jquery.js"></script>
+  <body>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+      <li>six</li>
+      <li>seven</li>
+      <li>eight</li>
+      <li>nine</li>
+    </ul>
+  </body>
+  <script>
+    // $("li:first, li:last").css("backgroundColor", "yellow");
+    // $("li:lt(4)").css("font-size", "32px");
+    // $("li:eq(5)").css("backgroundColor", "red");
+    $("li:odd").css("backgroundColor", "pink");
+    $("li:even").css("backgroundColor", "gray");
+  </script>
+</html>

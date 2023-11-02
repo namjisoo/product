@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../resources/jquery.js"></script>
+<body>
+    <p title="text1">일반 문단입니다</p>
+    <!-- <p title="text1"> 타이틀을 가지고 있는 문단입니다</p> -->
+    <!-- <p title="text1text2"> 타이틀을 가지고 있는 문단입니다</p> -->
+    <p title="text1 text2"> 타이틀을 가지고 있는 문단입니다</p>
+    <input type="text"> 회원번호</input>
+    <input type="password"> 비밀번호</input>
+</body>
+<script>
+    $(function(){
+        $('p[title]').css('backgroundColor','yellow');
+        // title 속성값이 text2가 아닌 속성
+        $('p[title != text2]').css('backgroundColor','pink')
+        // title 속성값이 text1로 시작하는 p태그
+        $('p[title ^= text1]').css('backgroundColor','green');
+        // title 속성값이 text1로 끝나는 p태그
+        $('p[title $= text1]').css('backgroundColor','red')
+        // title 속성값이 text1과 일치 또는 text1-로 시작하는 p태그
+        $('p[title |= text1]').css('backgroundColor', 'blue')
+        // title 속성값이 text1을 포함하는 p태그
+        $('p[title *= text1]').css('backgroundColor', 'orange')
+        // title 속성값이 text1 단어를 포함하는 p태그
+        $('p[title ~=  text1]').css('backgroundColor', 'purple');
+        $('input[type = password]').css('border','2px solid red')
+    })
+</script>
+</html>

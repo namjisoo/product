@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../resources/jquery.js"></script>
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <a href="http://tjdaewoo.co.kr">DW아카데미</a><br /><br />
+    <a href="mailto:kjy.devops@gmail.com">kjy에게 메일보내기</a><br /><br />
+    <div><label>Some images:</label></div>
+    <div>
+      <img src="../resources/images/img1.jpg" id="img1" alt="" />
+      <img src="../resources/images/img2.webp" id="img2" alt="" />
+      <img src="../resources/images/img3.jpg" id="img3" alt="" />
+      <img src="../resources/images/img4.jpg" id="img4" alt="" />
+      <img src="../resources/images/img5.jpg" id="img5" alt="" />
+      <img src="../resources/images/img6.jpg" id="img6" alt="" />
+      <img src="../resources/images/img7.jpg" id="img7" alt="" />
+    </div>
+    <div id="someDiv">
+      이곳은 속성이 <tt>someDiv</tt>인 &lt;div&gt; 태그입니다.
+    </div>
+    <form>
+      <div>
+        <label>Text:</label>
+        <input type="text" id="aTextField" name="someTextField" />
+      </div>
+      <button type="submit" id="submitButton">Submit</button
+      ><input type="button" value="클릭~~" id="changeBtn" />
+    </form>
+  </body>
+  <script>
+    $("#changeBtn").on("click", function () {
+      $("input[type = button]").css("backgroundColor", "yellow");
+      $("a[href ^= mailto]").css({
+        backgroundColor: "yellow",
+        textDecoration: "none",
+      });
+      $("img[id != img1]").css("border", "3px solid yellowgreen");
+      $("img[src $= webp]").css("border", "3px solid pink");
+    });
+  </script>
+</html>

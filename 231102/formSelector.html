@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../resources/jquery.js"></script>
+  <body>
+    <h1>회원가입</h1>
+    <form action="attrSelector2.html">
+      <fieldset>
+        <legend>필수 입력 사항</legend>
+        <table>
+          <tr>
+            <th>ID</th>
+            <td><input type="text" placeholder="아이디 10글자 이내" /></td>
+            <td><input type="button" value="중복 확인" /></td>
+          </tr>
+          <tr>
+            <th>비밀번호</th>
+            <td>
+              <input
+                type="password"
+                placeholder="영문,숫자,특수문자 포함 8자 이상"
+              />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>비밀번호 확인</th>
+            <td><input type="password" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><input type="text" /></td>
+            <td>
+              <select name="" id="">
+                <option>선택</option>
+                <option>@gmail.com</option>
+                <option>@naver.com</option>
+                <option>@daum.net</option>
+                <option>직접입력</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>추가 정보</legend>
+        <p>
+          프로필사진
+          <input type="file" />
+        </p>
+        <p>
+          성별 :
+          <input type="radio" id="male" name="gender" /> 남
+          <input type="radio" id="female" name="gender" /> 여
+        </p>
+        <p>
+          생년월일 :
+          <input type="date" name="" id="" />
+        </p>
+
+        <p>
+          취미<br />
+          <input type="checkbox" name="hobby" id="a" />
+          <label for="a">야구</label>
+          <input type="checkbox" name="hobby" id="b" />
+          <label for="b">농구</label>
+          <input type="checkbox" name="hobby" id="c" />
+          <label for="c">축구</label> <br />
+          <input type="checkbox" name="hobby" id="d" />
+          <label for="d">공부</label>
+          <input type="checkbox" name="hobby" id="e" />
+          <label for="e">음악감상</label> <br />
+          <input type="checkbox" name="hobby" id="f" />
+          <label for="f">기타</label>
+          <input type="text" />
+        </p>
+        <p>
+          자기소개<br />
+          <textarea name="" id="" cols="70" rows="10"></textarea>
+        </p>
+      </fieldset>
+      <p>
+        <input type="submit" value="회원가입" />
+        <input type="reset" value="다시입력" />
+        <input
+          type="button"
+          value="이전으로"
+          onclick="javascript:history.go(-1)"
+        />
+      </p>
+    </form>
+  </body>
+  <script>
+    $(":input").css({
+      backgroundColor: "pink",
+      border: "2px solid lime",
+    });
+    $("td input").css("border", "2px solid blue");
+    $(":button").css("backgroundColor", "yellow");
+    $(":submit").css("backgroundColor", "green");
+    $(":text, :password").css("border", "2px solid blue");
+    $(":file").css("border", "2px solid red");
+  </script>
+</html>
