@@ -20,7 +20,7 @@
       ];
       const randNum = parseInt(Math.random() * 5);
       const img = $(
-        '<img src="../resources/images/${imgArr[randNum]}" width="200px" height="200px" style="border: 1px solid red"'
+        `<img src="../resources/images/${imgArr[randNum]}" width="200px" height="200px" style="border: 1px solid red"`
       );
       img.appendTo("body");
     });

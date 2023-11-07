@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../resources/jquery.js"></script>
+  <body>
+    <form>
+      <label for="user">이름</label>
+      <input type="text" id="user" value="korea" readonly /><br />
+      <label>성별</label>
+      <input type="radio" id="gend" name="gend" value="남자" checked />남자
+      <input type="radio" id="gend" name="gend" value="여자" />여자<br />
+      <label for="intro">소개</label>
+      <textarea id="intro" cols="40" rows="4"></textarea> <br />
+      <label for="work">직업</label>
+      <select id="work">
+        <option value="programmer">프로그래머</option>
+        <option value="progammer">프로게이머</option>
+        <option value="whitehand">백수</option></select
+      ><br />
+      <input type="button" id="btnView" value="조사하기" />
+      <input type="button" id="btnChange" value="이름변경" />
+    </form>
+  </body>
+  <script>
+    console.log($("label[for=user]").html());
+
+    // 이름 변경 클릭 이벤트
+    $("#btnChange").on("click", function () {
+      const nameInput = $("#user");
+      const newName = prompt("이름을 입력해주세요");
+      nameInput.val(newName);
+    });
+
+    $("#btnView").on("click", function () {
+      const name = $("#user").val();
+      const gender = $("#gend:checked").val();
+      const intro = $("#intro").val();
+      const work = $("option:selected").val();
+      alert(name + "\n" + gender + "\n" + intro + "\n" + work);
+    });
+  </script>
+</html>

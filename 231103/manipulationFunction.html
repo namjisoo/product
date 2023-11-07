@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="../resources/jquery.js"></script>
+  <style>
+    p {
+      cursor: pointer;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <p title="Tulips">튜울립</p>
+    <p title="chrysanthemum">국화</p>
+    <p title="Koala">코알라</p>
+    <p title="Hydrangeas">수국</p>
+  </body>
+  <script>
+    const imgArr = ["img1.jpg", "img2.webp", "img3.jpg", "img4.jpg"];
+    $("p").on("click", function () {
+      const index = $(this).index();
+      //   $(this).append(`<img src="../resources/images/${imgArr[index]}">`);
+      $(this).prepend(`<img src="../resources/images/${imgArr[index]}">`);
+    });
+  </script>
+</html>
