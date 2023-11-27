@@ -9,6 +9,11 @@
     .selected {
       background-color: yellow;
     }
+
+    tr {
+      height: 50px;
+      cursor: pointer;
+    }
   </style>
   <body>
     <p>
@@ -46,15 +51,27 @@
     </table>
     <br />
     <button id="deleteBtn">회원삭제</button>
+    <button id="updateBtn">회원정보수정</button>
   </body>
   <script type="module">
     import * as firebase from "../resources/js/firebase.js";
-    const { db, getDocs, collection, getDatas, setDoc, addDoc, doc, addDatas } =
-      firebase;
+    const {
+      db,
+      getDocs,
+      collection,
+      getDatas,
+      setDoc,
+      addDoc,
+      doc,
+      addDatas,
+      deleteDoc,
+      updateDoc,
+      updateDatas,
+    } = firebase;
 
+    const memberTable = document.querySelector("table");
     async function getMembers() {
       const snapshot = await getDatas("member");
-      const memberTable = document.querySelector("table");
       snapshot.forEach((doc) => {
         const { memberName, memberAge, memberTel, memberId, memberEmail } =
           doc.data();
@@ -77,10 +94,37 @@
     getMembers().then(function () {
       const trs = document.querySelectorAll("tr");
       trs.forEach((el) => {
-        el.addEventListener("click", function () {
-          el.classList.toggle("selected");
+        el.addEventListener("click", function (e) {
+          if (e.target.tagName != "TH") {
+            el.classList.toggle("selected");
+          }
         });
       });
+    });
+
+    const deleteBtn = document.querySelector("#deleteBtn");
+    deleteBtn.addEventListener("click", function () {
+      const selectedTrs = memberTable.querySelectorAll("[class=selected]");
+      if (selectedTrs.length == 0) {
+        alert("삭제할 데이터가 없습니다.");
+        return;
+      }
+
+      selectedTrs.forEach((el) => {
+        const docId = el.lastElementChild.value;
+        deleteDatas("member", docId).then(function () {
+          window.location.reload();
+        });
+      });
+    });
+
+    const updateBtn = document.querySelector("#updateBtn");
+    updateBtn.addEventListener("click", function () {
+      // const memberRef =;
+      updateDatas("member", "7iTTp8jiXoerKcpUy3I6", {
+        memberId: "zsoo3000",
+        memberTel: "123555",
+      }).then(() => window.location.reload());
     });
 
     const btn = document.querySelector("#saveBtn");
@@ -92,7 +136,9 @@
         memberId: document.querySelector("input[name=id]").value,
         memberEmail: document.querySelector("input[name=email]").value,
       };
-      addDatas("member", memberInfo);
+      addDatas("member", memberInfo).then(() => {
+        window.location.reload();
+      });
     });
   </script>
 </html>

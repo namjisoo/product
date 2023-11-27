@@ -4,9 +4,12 @@ import {
   getFirestore,
   collection,
   getDocs,
+  getDoc,
   setDoc,
   addDoc,
   doc,
+  deleteDoc,
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
 
@@ -38,4 +41,30 @@ async function addDatas(collectionName, dataObj) {
   await addDoc(collection(db, collectionName), dataObj);
 }
 
-export { db, getDocs, collection, getDatas, setDoc, addDoc, doc, addDatas };
+async function deleteDatas(collectionName, docId) {
+  await deleteDoc(doc(db, collectionName, docId));
+}
+
+async function updateDatas(collectionName, docId, updateInfoObj) {
+  const docRef = await doc(db, collectionName, docId);
+  const docData = await getDoc(docRef);
+  console.log(docData.data());
+  // debugger;
+  // 문서 필드 데이터 수정
+  await updateDoc(docRef, updateInfoObj);
+}
+
+export {
+  db,
+  getDocs,
+  collection,
+  getDatas,
+  setDoc,
+  addDoc,
+  doc,
+  addDatas,
+  deleteDoc,
+  deleteDatas,
+  updateDoc,
+  updateDatas,
+};
