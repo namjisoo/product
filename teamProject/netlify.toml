@@ -1,0 +1,3 @@
+[build]
+publich - "public"
+command = "npm run build"
