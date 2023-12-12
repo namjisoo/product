@@ -25,8 +25,8 @@ function App() {
   // 리액트에서는 State라는 것을 사용한다. State는 리액트에서 변수같은 것인데 이 State가 바뀔 때마다 리액트가 알아서 화면을 새로 렌더링해준다.
   // useSrate 라는 함수값이 myNum으로 넘어가고, myNum을 바꾸려면 아래와 같이 setMyNum이라는 함수를 변경해줘야 리액트에서 인식한다.
   // setMyNum(4);
-  const [myNum, setMyNum] = useState(1);
-  const [otherNum, setOtherNum] = useState(1);
+  // const [myNum, setMyNum] = useState(1);
+  // const [otherNum, setOtherNum] = useState(1);
   const [gameHistory, setGameHistory] = useState([]);
   const [otherGameHistory, setOtherGameHistory] = useState([]);
 
@@ -34,14 +34,15 @@ function App() {
     // 주사위 숫자 뽑아야 한다.
     const nextMyNum = random(6);
     const nextOtherNum = random(6);
-    setMyNum(nextMyNum);
-    setOtherNum(nextOtherNum);
+    // setMyNum(nextMyNum);
+    // setOtherNum(nextOtherNum);
     setGameHistory([...gameHistory, nextMyNum]);
     setOtherGameHistory([...otherGameHistory, nextOtherNum]);
   };
 
   const handleClearClick = () => {
-    alert("처음으로 함수");
+    setGameHistory([]);
+    setOtherGameHistory([]);
   };
 
   return (
@@ -50,18 +51,17 @@ function App() {
         <img src={logo} alt="주사위게임 로고" className="App-logo" />
         <h1 className="App-title">주사위게임</h1>
         <div>
-          <Button onClick={handleRollClick}>던지기</Button>
-          <Button onClick={handleClearClick}>처음부터</Button>
+          <Button className="App-button blue" onClick={handleRollClick}>
+            던지기
+          </Button>
+          <Button className="App-button red" onClick={handleClearClick}>
+            처음부터
+          </Button>
         </div>
       </div>
       <div className="App-boards">
-        <Board name="나" color="blue" num={myNum} gameHistory={gameHistory} />
-        <Board
-          name="상대"
-          color="red"
-          num={otherNum}
-          gameHistory={otherGameHistory}
-        />
+        <Board name="나" color="blue" gameHistory={gameHistory} />
+        <Board name="상대" color="red" gameHistory={otherGameHistory} />
       </div>
     </div>
   );

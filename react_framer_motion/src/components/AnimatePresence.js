@@ -1,0 +1,40 @@
+import { motion, AnimatePresence } from "framer-motion";
+import "./AnimatePresence.css";
+import { useState } from "react";
+
+const boxVariants = {
+  start: { opacity: 0, scale: 0 },
+  end: {
+    opacity: 1,
+    scale: 1,
+    retateZ: 360,
+    transition: { type: "spring" },
+  },
+  exit: { opacity: 0, scale: 0, retateZ: -360 },
+};
+
+export function MyAnimatePresence() {
+  const [showing, setShowing] = useState(false);
+  function onClick() {
+    console.log(showing);
+    setShowing((showing) => !showing);
+  }
+  return (
+    <>
+      <div className="container">
+        <AnimatePresence>
+          {showing ? (
+            <motion.div
+              className="box"
+              variants={boxVariants}
+              initial="start"
+              animate="end"
+              exit="exit"
+            ></motion.div>
+          ) : null}
+          <button onClick={onClick}>Click Me</button>
+        </AnimatePresence>
+      </div>
+    </>
+  );
+}

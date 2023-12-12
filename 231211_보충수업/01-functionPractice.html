@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-functionPractice</title>
+  </head>
+  <body></body>
+  <script>
+    let z = 2;
+
+    function A(a, b) {
+      //   console.log(a + b + B(a, b));
+      //   return a - b;
+      z = a - b;
+    }
+    function B(a, b, ...args) {
+      return a + b;
+    }
+
+    const B = (a, b, ...arg) => {
+      return a + b;
+    };
+    const B = (a, b, ...arg) => a + b;
+
+    const B = (a, b, ...arg) => ({ a: a + b, b: a - b });
+
+    const B = (a) => {
+      return a + 20;
+    };
+    const B = (a) => a + 20;
+
+    // A(2, 5);
+    // console.log(A(2, 5) + B(10, 3));
+    // const resultA = A(2, 5);
+    // const resultB = B(10, 3);
+    // console.log|(resultA + resultB)
+
+    // console.log(z);
+    // A(10, 3);
+    // console.log(z);
+
+    // var, let, const
+    if (true) {
+      let test = 0;
+      test = 1;
+
+      const test2 = 1;
+      // test2 = 3;
+
+      // let x; 가능
+      // const y; 불가능
+
+      console.log(z);
+    }
+    console.log(test);
+
+    function sumArr(arr) {
+      arr.forEach((v) => {
+        return (z += v);
+      });
+    }
+
+    const arr = [1, 2, 3, 4, 5];
+    sumArr(arr);
+    console.log(z);
+  </script>
+</html>
