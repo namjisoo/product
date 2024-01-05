@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import FileInput from "./FileInput";
 import RatingInput from "./RatingInput";
+import useTranslate from "../hooks/useTranslate";
 
 const INITIAL_VALUES = {
   title: "",
@@ -8,7 +9,7 @@ const INITIAL_VALUES = {
   content: "",
   imgUrl: null,
 };
-//  initialValues = INITIAL_VALUES 를 쓴 이유는 app과  리뷰리스트에 리뷰폼이 겹치기 때문에 initialValues가 undefined일 때 = 뒤에있는 INITIAL_VALUES가 오게 하기 위함이다.
+
 function ReviewForm({
   onSubmit,
   onSubmitSuccess,
@@ -19,6 +20,7 @@ function ReviewForm({
   const [values, setValues] = useState(initialValues);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittingError, setSubmittingError] = useState(null);
+  const t = useTranslate();
 
   const handleChange = (name, value) => {
     setValues((prevValues) => ({ ...prevValues, [name]: value }));
@@ -32,17 +34,17 @@ function ReviewForm({
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const formData = {
+      title: values.title,
+      content: values.content,
+      imgUrl: values.imgUrl,
+      rating: values.rating,
+    };
+
     try {
       setSubmittingError(null);
       setIsSubmitting(true);
-      const formData = {
-        title: values.title,
-        content: values.content,
-        imgUrl: values.imgUrl,
-        rating: values.rating,
-      };
       const { review } = await onSubmit("movie", formData);
-      // addDatas = onSubmit
       onSubmitSuccess(review);
     } catch (error) {
       setSubmittingError(error);
@@ -66,8 +68,8 @@ function ReviewForm({
         name="title"
         value={values.title}
         onChange={handleInputChange}
+        placeholder={t("title placeholder")}
       />
-      {/* value 속성을 쓰려면 onChange가 꼭 있어야한다. */}
       <RatingInput
         type="number"
         name="rating"
@@ -78,10 +80,11 @@ function ReviewForm({
         name="content"
         value={values.content}
         onChange={handleInputChange}
+        placeholder={t("content placeholder")}
       />
-      {onCancel && <button onClick={onCancel}>취소</button>}
+      {onCancel && <button onClick={onCancel}>{t("cancel button")}</button>}
       <button type="submit" disabled={isSubmitting}>
-        확인
+        {t("confirm button")}
       </button>
       {submittingError?.message && <div>{submittingError.message}</div>}
     </form>

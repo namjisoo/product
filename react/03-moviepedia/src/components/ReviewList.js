@@ -1,7 +1,9 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./ReviewList.css";
 import ReviewForm from "./ReviewForm";
-import LocaleContext from "../contexts/LocaleContext";
+import { useLocale } from "../contexts/LocaleContext";
+import useTranslate from "../hooks/useTranslate";
+import Rating from "./Rating";
 
 function formatDate(value) {
   const date = new Date(value);
@@ -9,7 +11,8 @@ function formatDate(value) {
 }
 
 function ReviewListItem({ item, onDelete, onEdit }) {
-  const locale = useContext(LocaleContext);
+  // const locale = useContext(LocaleContext);
+  const t = useTranslate();
 
   const handleDeleteClick = () => onDelete(item.docId, item.imgUrl);
   const handleEditClick = () => {
@@ -18,14 +21,26 @@ function ReviewListItem({ item, onDelete, onEdit }) {
   return (
     <div className="ReviewListItem">
       <img className="ReviewListItem-img" src={item.imgUrl} />
-      <div>
-        <h1>{item.title}</h1>
-        <span>{item.rating}</span>
-        <p>{formatDate(item.createdAt)}</p>
-        <p>{item.content}</p>
-        <p>현재 언어 : {locale}</p>
-        <button onClick={handleEditClick}>수정</button>
-        <button onClick={handleDeleteClick}>삭제</button>
+      <div className="ReviewListItem-rows">
+        <h1 className="ReviewListItem-title">{item.title}</h1>
+        <Rating className="ReviewListItem-rating" hoverRating={item.rating} />
+        <p className="ReviewListItem-date">{formatDate(item.createdAt)}</p>
+        <p className="ReviewListItem-content">{item.content}</p>
+        {/* <p>현재 언어 : {locale}</p> */}
+        <div className="ReviewListItem-buttons">
+          <button
+            className="ReviewListItem-edit-button"
+            onClick={handleEditClick}
+          >
+            {t("edit button")}
+          </button>
+          <button
+            className="ReviewListItem-delete-button"
+            onClick={handleDeleteClick}
+          >
+            {t("delete button")}
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -36,7 +51,7 @@ function ReviewList({ items, onDelete, onUpdate, onUpdateSuccess }) {
   const [editingId, setEditingId] = useState(null);
 
   return (
-    <ul>
+    <ul className="ReviewList">
       {items.map((item) => {
         if (item.id === editingId) {
           // 수정 버튼을 눌렀을 때

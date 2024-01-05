@@ -1,12 +1,16 @@
-import React from "react";
+import { useLocale, useSetLocale } from "../contexts/LocaleContext";
+import "./LocaleSelect.css";
 
 const LocaleSelect = ({ value, onChange }) => {
   // onChange에 setLocale이 담겨 있기 때문에 바로 못쓰고 handleChange로 다시 함수를 만들어 선언해야한다.
 
-  const handleChange = (e) => onChange(e.target.value);
+  const locale = useLocale();
+  const setLocale = useSetLocale();
+  const handleChange = (e) => setLocale(e.target.value);
+  console.log("LocaleSelect 로딩");
 
   return (
-    <select value={value} onChange={handleChange}>
+    <select className="LocaleSelect" value={locale} onChange={handleChange}>
       <option value="ko">한국어</option>
       <option value="en">English</option>
     </select>
