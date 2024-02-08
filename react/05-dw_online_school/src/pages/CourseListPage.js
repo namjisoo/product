@@ -9,6 +9,8 @@ import CourseItem from "../components/CourseItem";
 
 let listItems;
 
+// 코스리스트페이지
+
 function CourseListPage() {
   const [items, setItems] = useState([]);
   const [keyword, setKeyword] = useState("");

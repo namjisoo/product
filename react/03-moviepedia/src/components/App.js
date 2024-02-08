@@ -56,6 +56,7 @@ function App() {
     setOrder("rating");
   };
 
+  // 삭제하기
   const handleDelete = async (docId, imgUrl) => {
     // items 에서 id 파라미터와 같은 id를 가지는 요소(객체)를 제거
     // const nextItems = items.filter((item) => item.id !== id);
@@ -74,6 +75,7 @@ function App() {
     setItems((prevItems) => prevItems.filter((item) => item.docId !== docId));
   };
 
+  // 리스트 뿌리기
   const handleLoad = async (options) => {
     // {
     //   reviews: []
@@ -105,6 +107,7 @@ function App() {
     // const {reviews} = result
   };
 
+  // 더보기
   const handleLoadMore = () => {
     handleLoad({ order, lq, limit: LIMIT });
   };

@@ -8,6 +8,8 @@ import getCourseColor from "../utils/getCourseColor";
 import { useEffect, useState } from "react";
 import { getData, updateDatas } from "../api/firebase";
 
+// 상세페이지
+
 function CoursePage() {
   const props = useLocation();
   // const { course } = props.state;
@@ -18,6 +20,7 @@ function CoursePage() {
 
   const courseColor = getCourseColor(course?.code);
 
+  // 위시리스트 담기
   const handleAddWishlistClick = async () => {
     const member = JSON.parse(localStorage.getItem("member"));
 
@@ -37,8 +40,10 @@ function CoursePage() {
     borderTopColor: courseColor,
   };
 
+  // 상세페이지 가져오기
   const handleLoad = async () => {
     const result = await getData("courses", "slug", "==", courseSlug);
+    console.log(result);
     setCourse(result);
   };
 
