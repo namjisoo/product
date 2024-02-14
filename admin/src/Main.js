@@ -2,12 +2,12 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./component/App.js";
 // import CoursePage from './mypages/CoursePage';
-import NotFound from "./mypages/NotFound";
-import Post from "./mypages/Post.js";
-import Resistration from "./mypages/Resistration.js";
-import Company from "./mypages/Company.js";
-import Individual from "./mypages/Individual";
-import Report from "./mypages/Report";
+import NotFound from "./pages/NotFound";
+import Post from "./pages/Post.js";
+import Resistration from "./pages/Resistration.js";
+import Company from "./pages/Company.js";
+import Individual from "./pages/Individual";
+import Report from "./pages/Report";
 
 function Main() {
   return (
