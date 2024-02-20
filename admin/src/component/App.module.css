@@ -21,21 +21,21 @@ a:visited {
 }
 
 :root {
-    --box-shadow:5px 5px 10px 0 rgb(0 0 0/5%);
+  --box-shadow: 5px 5px 10px 0 rgb(0 0 0/5%);
 }
 
-:global(#root){
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+/* :global(#root) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
 
-.nav,
-.footer{
-    flex: none;
-}
+/* .nav,
+.footer {
+  flex: none;
+} */
 
-.body{
-    position: relative;
-    flex-grow: 1;
+.body {
+  position: relative;
+  flex-grow: 1;
 }

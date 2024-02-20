@@ -9,9 +9,9 @@ import haversine from "haversine";
 import styles from "./HospitalListPage.module.css";
 import searchIcon from "../assets/icon/search_icon.svg";
 import stylesBtn from "../components/Button.module.css";
-import PharmacyItem from "./../components/PharmacyItem";
+import HospitalItem from "./../components/HospitalItem";
 
-const PharmacyListPage = () => {
+const HospitalListPage = () => {
   const [hospitalItems, setHospitalItems] = useState([]);
   const [items, setItems] = useState([]);
   const [keyword, setKeyword] = useState("");
@@ -34,7 +34,7 @@ const PharmacyListPage = () => {
     setItems(searchItems);
   };
 
-  // 약국데이터뿌리기
+  // 병원데이터뿌리기
   const handleLoad = async () => {
     const fetchedHospitalItems = await getDatas("hospital");
     setHospitalItems(fetchedHospitalItems);
@@ -94,12 +94,12 @@ const PharmacyListPage = () => {
     <div className={styles.hospitalListContainer}>
       <h1 className={styles.title}>동물병원&middot;약국찾기</h1>
       <div className={styles.btnFilter}>
-        <Button className={stylesBtn.itemBtn}>
+        <Button className={stylesBtn.itemBtnActive}>
           <Link to="/hospital" className={styles.link}>
             병원
           </Link>
         </Button>
-        <Button className={stylesBtn.itemBtnActive}>
+        <Button className={stylesBtn.itemBtn}>
           <Link to="/pharmacy" className={styles.link}>
             약국
           </Link>
@@ -148,7 +148,7 @@ const PharmacyListPage = () => {
       ) : (
         <div className={styles.itemContainer}>
           {items.map((item) => (
-            <PharmacyItem key={item.docId} pharmacy={item} />
+            <HospitalItem key={item.docId} hospital={item} />
           ))}
         </div>
       )}
@@ -156,4 +156,4 @@ const PharmacyListPage = () => {
   );
 };
 
-export default PharmacyListPage;
+export default HospitalListPage;

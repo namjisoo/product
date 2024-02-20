@@ -248,9 +248,9 @@ const HospitalPage = () => {
       {/* </ReviewList> */}
       {/* 예약버튼 */}
       <div className={styles.ReservationBtnWrapper}>
-        <Button className={stylesBtn.ReservationBtn2} onClick={openModal}>
+        <button className={styles.ReservationBtn2} onClick={openModal}>
           예약하기
-        </Button>
+        </button>
         <ReservationModal
           hospital={hospital}
           isOpen={isModalOpen}

@@ -29,19 +29,6 @@
   font-size: 14px;
 }
 
-.ReservationBtn2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  padding: 10px 0;
-  background-color: transparent;
-  color: var(--mainColor);
-  border: 1px solid var(--mainColor);
-  cursor: pointer;
-  font-size: 16px;
-}
-
 .ReservationBtn:hover {
   background-color: #ff9b50;
   color: white;
